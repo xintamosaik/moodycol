@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>moody colors</title>
+    <title>Moody Colors</title>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/styles.css" />
   </head>
 
   <body>
     <main>
       <section id="input">
-				<input id="mood"></input>
-				<button id="generator"></button>
+        <label class="glow" for="mood">How are you feeling?</label>
+        <input id="mood" type="text" name="mood" placeholder="hangry?"></input>
+				<button id="generator">SUBMIT</button>
 			</section>
-      <section id="output"></section>
+      <!-- <section id="output">
+        <label for="mood"></label>
+        <output id="mood" type="text" name="mood"></output>
+      </section> -->
     </main>
     <script src="src/index.js"></script>
   </body>
