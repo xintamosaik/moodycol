@@ -163,3 +163,65 @@ label {
     transform: scale(1, 1) translateY(0);
   }
 }
+
+/* Output Page */
+
+.palette {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 2.5em;
+  color: whitesmoke;
+  padding-top: 4em;
+  font-weight: 700;
+  text-shadow: 0 0 7px #fff, 0 0 10px gray, 0 0 21px gray, 0 0 42px gray,
+    0 0 82px lightyellow, 0 0 92px lightyellow, 0 0 102px lightyellow,
+    0 0 151px lightyellow;
+}
+
+#output-page {
+  background: linear-gradient(to top, lightyellow, darkblue);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.color-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #7901ff;
+  border: 3px solid black;
+  color: whitesmoke;
+  width: 15em;
+  height: 100%;
+  margin: 0 auto;
+  padding-top: 1em;
+  padding-bottom: 6em;
+}
+
+.color-box li {
+  list-style-type: none;
+  margin-left: -2.5em;
+  text-align: center;
+  width: 10em;
+  padding: 1em;
+}
+
+.color-1 {
+  background-color: #343c58;
+}
+.color-2 {
+  background-color: #4e3f60;
+}
+.color-3 {
+  background-color: #5e3e5a;
+}
+.color-4 {
+  background-color: #b62b2b;
+}
+.color-5 {
+  background-color: #ff1818;
+}
