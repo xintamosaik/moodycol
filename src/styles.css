@@ -1,13 +1,16 @@
 body {
-  font-family: sans-serif;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+#input-page {
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to bottom, whitesmoke, grey);
+  background: linear-gradient(to top, whitesmoke, grey);
   background-repeat: no-repeat;
 }
 
@@ -18,7 +21,7 @@ body {
   justify-content: center;
   margin: 2em;
   background-color: rgba(128, 128, 128, 0.795);
-  border: 2px solid black;
+  border: 3px solid black;
   border-radius: 0.5em;
   width: 15em;
   color: whitesmoke;
@@ -37,7 +40,7 @@ input[placeholder] {
 }
 
 #mood {
-  border: 2px solid black;
+  border: 3px solid black;
   border-radius: 0.5em;
   height: 2.5em;
   width: 12em;
@@ -48,25 +51,62 @@ label {
   padding: 1em;
 }
 
-button {
+#generator {
   margin: 1em;
-  border: 2px solid black;
+  border: 3px solid black;
   padding: 1em;
   background-color: limegreen;
   color: whitesmoke;
   font-size: 1em;
   width: 11.5em;
   border-radius: 0.7em;
+  cursor: pointer;
+}
+
+#generator:hover {
+  background-color: rgba(50, 205, 50, 0.747);
+}
+
+#generator:active {
+  background-color: rgba(50, 205, 50, 0.473);
 }
 
 @-webkit-keyframes glow {
   from {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px whitesmoke,
-      0 0 40px white, 0 0 50px whitesmoke, 0 0 60px yellow;
+      0 0 40px white, 0 0 50px whitesmoke, 0 0 60px lightyellow;
   }
 
   to {
     text-shadow: 0 0 20px #fff, 0 0 30px white, 0 0 40px lightgray,
-      0 0 50px yellow, 0 0 60px white, 0 0 70px yellow;
+      0 0 50px lightgray, 0 0 60px white, 0 0 70px lightyellow;
   }
+}
+
+#back {
+  margin: 1em;
+  border: 3px solid black;
+  padding: 1em;
+  background-color: blue;
+  color: whitesmoke;
+  font-size: 1em;
+  width: 15.5em;
+  border-radius: 0.7em;
+  cursor: pointer;
+}
+
+#back:hover {
+  background-color: rgba(0, 0, 255, 0.712);
+}
+
+#back:active {
+  background-color: rgba(0, 0, 255, 0.582);
+}
+
+/* Welcome Page */
+
+#welcome-page {
+  background: linear-gradient(to top, darkblue, blue);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
