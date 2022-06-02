@@ -23,7 +23,7 @@ body {
   background-color: rgba(128, 128, 128, 0.795);
   border: 3px solid black;
   border-radius: 0.5em;
-  width: 15em;
+  width: 17.5em;
   color: whitesmoke;
 }
 
@@ -31,13 +31,15 @@ input[placeholder] {
   text-align: center;
 }
 
-.glow {
+.question {
   font-family: "Open Sans", sans-serif;
-  font-size: 1em;
+  font-size: 1.5em;
   color: whitesmoke;
-  animation: glow 1s ease-in-out infinite alternate;
-  font-size: 1.2em;
-  font-weight: bold;
+  margin: -0.5em;
+  font-weight: 700;
+  text-shadow: 0 0 7px #fff, 0 0 10px gray, 0 0 21px gray, 0 0 42px gray,
+    0 0 82px lightyellow, 0 0 92px lightyellow, 0 0 102px lightyellow,
+    0 0 151px lightyellow;
 }
 
 #mood {
@@ -70,18 +72,6 @@ label {
 
 #generator:active {
   background-color: rgba(50, 205, 50, 0.473);
-}
-
-@-webkit-keyframes glow {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px whitesmoke,
-      0 0 40px white, 0 0 50px whitesmoke, 0 0 60px lightyellow;
-  }
-
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px white, 0 0 40px lightgray,
-      0 0 50px lightgray, 0 0 60px white, 0 0 70px lightyellow;
-  }
 }
 
 #back {
