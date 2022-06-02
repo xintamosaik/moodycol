@@ -193,13 +193,12 @@ label {
   align-items: center;
   justify-content: center;
   background-color: #7901ff;
-  border: 3px solid black;
+  border: 4px solid black;
   color: whitesmoke;
   width: 15em;
   height: 100%;
   margin: 0 auto;
   padding-top: 1em;
-  padding-bottom: 6em;
 }
 
 .color-box li {
