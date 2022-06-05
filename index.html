@@ -11,16 +11,61 @@
       href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" 
+      rel="stylesheet"
+      />
     <title>Moody Colors</title>
   </head>
   <body>
     <main>
-      <div id="welcome-page">
-        <a class="welcome-title">WELCOME TO MOODSIMULATOR</a>
+      <section id="welcome-page" >
+        <h1 class="welcome-title">WELCOME TO MOODSIMULATOR</h1>
         <div class="stage">
-          <a class="arrow box bounce-4" href="./home.html">&#8595;</a>
+          <a id="arrow" class="arrow box bounce-4">&#8595;</a>
         </div>
+      </section>
+<!-- ##############################################-->
+<!-- #                                            #-->
+<!-- #                  INPUT                     #-->
+<!-- #                                            #-->
+<!-- ##############################################-->
+      <section id="input-page" class="hidden">
+        <div class=flex>
+        <div id="input">
+          <label class="question" for="mood">How are you feeling?</label>
+          <input id="mood" type="text" name="mood" placeholder="hangry?"></input>
+          <button id="generator">SUBMIT</button>
+        </div>
+        <button id="back">BACK TO WELCOME</button>
       </div>
+      </section>
+<!-- ##############################################-->
+<!-- #                                            #-->
+<!-- #                  OUTPUT                     #-->
+<!-- #                                            #-->
+<!-- ##############################################-->
+      <section id="output-page" class="hidden">
+        <div id="output">
+          <label class="palette" for="palette">Your Color Palette</label>
+          <output id="palette" type="text" name="palette">
+         
+            <div class="color-box">
+              <h1>Hunger</h1>
+              <ul>
+                <li class="color-1"><p>#343C58</p></li>
+                <li class="color-2"><p>#4E3F60</p></li>
+                <li class="color-3"><p>#5E3E5A</p></li>
+                <li class="color-4"><p>#B62B2B</p></li>
+                <li class="color-5"><p>#FF1818</p></li>
+              </ul>
+            
+          </output>
+          <button id="menu">back</button>
+        </div>
+    
+      </section>
     </main>
+    <script src="src/index.js"></script>
   </body>
 </html>
