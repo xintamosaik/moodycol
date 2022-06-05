@@ -18,7 +18,7 @@ h1 {
 }
 /***************************************************
  *                                                 *
- *              WELCOME PAGE                       *
+ *                 WELCOME PAGE                    *
  *                                                 *
  **************************************************/
 
@@ -27,6 +27,7 @@ h1 {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  overflow: hidden;
 }
 
 .welcome-title {
@@ -93,7 +94,7 @@ h1 {
 
 /***************************************************
  *                                                 *
- *              INPUT PAGE                       *
+ *                  INPUT PAGE                     *
  *                                                 *
  **************************************************/
 
@@ -189,7 +190,7 @@ label {
 
 /***************************************************
  *                                                 *
- *              OUTPUT PAGE                       *
+ *                  OUTPUT PAGE                    *
  *                                                 *
  **************************************************/
 #output-page {
@@ -208,7 +209,7 @@ label {
   font-family: "Open sans", sans-serif;
   font-size: 2.5em;
   color: whitesmoke;
-  padding-top: 4em;
+  padding-top: 1em;
   font-weight: 700;
   text-shadow: 0 0 7px #fff, 0 0 10px gray, 0 0 21px gray, 0 0 42px gray,
     0 0 82px lightyellow, 0 0 92px lightyellow, 0 0 102px lightyellow,
@@ -263,15 +264,15 @@ label {
 }
 
 button#menu {
-  color: white;
-  font-size: 4em;
-  margin-top: 5vh;
-  margin-left: 40vw;
-  margin-right: 40vw;
-  width: 20vw;
-  border-radius: 5%;
-  height: 10vh;
-  background-color: greenyellow;
+  margin: 1em;
+  border: 3px solid black;
+  padding: 1em;
+  background-color: limegreen;
+  color: whitesmoke;
+  font-size: 1em;
+  width: 11.5em;
+  border-radius: 0.7em;
+  cursor: pointer;
 }
 
 /*clip-path: polygon(60% 0%, 60% 70%, 50% 100%, 40% 70%, 40% 0%);*/
