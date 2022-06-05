@@ -4,7 +4,100 @@ body {
   padding: 0;
 }
 
-#input-page {
+p {
+  font-family: Quicksand, sans-serif;
+  font-size: 1em;
+}
+
+h1 {
+  font-family: "Open Sans", sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+/***************************************************
+ *                                                 *
+ *              WELCOME PAGE                       *
+ *                                                 *
+ **************************************************/
+
+#welcome-page {
+  background: linear-gradient(to top, darkblue, blue);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.welcome-title {
+  font-family: "Big Shoulders Display", cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4.5em;
+  font-size: 3.75em;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px gray, 0 0 21px gray, 0 0 42px gray,
+    0 0 82px lightyellow, 0 0 92px lightyellow, 0 0 102px lightyellow,
+    0 0 151px lightyellow;
+}
+
+.arrow {
+  cursor: pointer;
+  font-size: 6em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding-top: 0.85em;
+  color: #fff;
+  text-shadow: 0 0 7px cyan, 0 0 10px cyan, 0 0 21px cyan, 0 0 42px cyan,
+    0 0 82px cyan, 0 0 92px cyan, 0 0 102px cyan, 0 0 151px cyan;
+}
+
+.stage {
+  display: flex;
+  height: 330px;
+  width: 100%;
+}
+.box {
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  height: 200px;
+  margin: 0 auto 0 auto;
+  transform-origin: bottom;
+  width: 200px;
+}
+.bounce-4 {
+  animation-name: bounce-4;
+  animation-timing-function: ease;
+}
+@keyframes bounce-4 {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-100px);
+  }
+  50% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+
+/***************************************************
+ *                                                 *
+ *              INPUT PAGE                       *
+ *                                                 *
+ **************************************************/
+
+.flex {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -94,83 +187,25 @@ label {
   background-color: rgba(0, 0, 255, 0.582);
 }
 
-/* Welcome Page */
-
-#welcome-page {
-  background: linear-gradient(to top, darkblue, blue);
+/***************************************************
+ *                                                 *
+ *              OUTPUT PAGE                       *
+ *                                                 *
+ **************************************************/
+#output-page {
+  background: linear-gradient(to top, lightyellow, darkblue);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
 }
-
-.welcome-title {
-  font-family: "Big Shoulders Display", cursive;
+.output {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 4.5em;
-  font-size: 3.75em;
-  font-weight: 600;
-  color: #fff;
-  text-shadow: 0 0 7px #fff, 0 0 10px gray, 0 0 21px gray, 0 0 42px gray,
-    0 0 82px lightyellow, 0 0 92px lightyellow, 0 0 102px lightyellow,
-    0 0 151px lightyellow;
 }
-
-.arrow {
-  font-size: 6em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  padding-top: 0.85em;
-  color: #fff;
-  text-shadow: 0 0 7px cyan, 0 0 10px cyan, 0 0 21px cyan, 0 0 42px cyan,
-    0 0 82px cyan, 0 0 92px cyan, 0 0 102px cyan, 0 0 151px cyan;
-}
-
-.stage {
-  display: flex;
-  height: 330px;
-  width: 100%;
-}
-.box {
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  height: 200px;
-  margin: 0 auto 0 auto;
-  transform-origin: bottom;
-  width: 200px;
-}
-.bounce-4 {
-  animation-name: bounce-4;
-  animation-timing-function: ease;
-}
-@keyframes bounce-4 {
-  0% {
-    transform: scale(1, 1) translateY(0);
-  }
-  10% {
-    transform: scale(1.1, 0.9) translateY(0);
-  }
-  30% {
-    transform: scale(0.9, 1.1) translateY(-100px);
-  }
-  50% {
-    transform: scale(1, 1) translateY(0);
-  }
-  100% {
-    transform: scale(1, 1) translateY(0);
-  }
-}
-
-/* Output Page */
-
 .palette {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open sans", sans-serif;
   font-size: 2.5em;
   color: whitesmoke;
   padding-top: 4em;
@@ -180,37 +215,37 @@ label {
     0 0 151px lightyellow;
 }
 
-#output-page {
-  background: linear-gradient(to top, lightyellow, darkblue);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-}
-
 .color-box {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 14vw;
+  /* background-color: blueviolet; */
   background-color: #7901ff;
   border: 4px solid black;
   color: whitesmoke;
-  width: 15em;
-  height: 100%;
+  width: 70vw;
+  max-width: 445px;
+  padding: 1em;
+  /* height: 100%; */
   margin: 0 auto;
-  padding-top: 1em;
 }
 
 .color-box li {
   list-style-type: none;
   margin-left: -2.5em;
   text-align: center;
-  width: 10em;
+  max-width: 400px;
+  width: 50vw;
   padding: 1em;
+  height: 2.5em;
 }
 
 .color-1 {
   background-color: #343c58;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
 }
 .color-2 {
   background-color: #4e3f60;
@@ -223,4 +258,21 @@ label {
 }
 .color-5 {
   background-color: #ff1818;
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
 }
+
+button#menu {
+  color: white;
+  font-size: 4em;
+  margin-top: 5vh;
+  margin-left: 40vw;
+  margin-right: 40vw;
+  width: 20vw;
+  border-radius: 5%;
+  height: 10vh;
+  background-color: greenyellow;
+}
+
+/*clip-path: polygon(60% 0%, 60% 70%, 50% 100%, 40% 70%, 40% 0%);*/
+/*clip-path: polygon(75% 1%, 75% 65%, 50% 92%, 25% 65%, 25% 1%);*/
