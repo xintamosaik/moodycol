@@ -35,6 +35,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   padding-top: 4.5em;
   font-size: 3.75em;
   font-weight: 600;
@@ -225,6 +226,7 @@ label {
   /* background-color: blueviolet; */
   background-color: #7901ff;
   border: 4px solid black;
+  border-radius: 0.5em;
   color: whitesmoke;
   width: 70vw;
   max-width: 445px;
