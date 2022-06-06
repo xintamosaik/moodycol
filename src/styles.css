@@ -217,55 +217,103 @@ label {
     0 0 151px lightyellow;
 }
 
-.color-box {
+#color-box {
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: bounce-3y;
+  animation-timing-function: ease;
+  /* background-color: black; */
+  background-color: black;
+  margin: 0 auto;
+  padding: 5px;
+
+  max-width: 90vw;
+  width: 90vw;
+  /*clip-path: url(#form);*/
+  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 50% 100%, 0% 80%);
+}
+
+#between {
+  background-color: white;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 50% 99.4%, 0% 80%);
+  padding: 0;
+  padding-bottom: 20px;
+}
+
+@keyframes bounce-3 {
+  0% {
+    background-color: teal;
+  }
+  10% {
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-100px);
+  }
+  50% {
+    transform: scale(1, 1) translateY(0);
+    background-color: magenta;
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+    padding-bottom: 20vh;
+  }
+}
+
+#inner-box {
+  background-color: #7901ff;
+
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
-  padding-bottom: 14vw;
-  /* background-color: blueviolet; */
-  background-color: #7901ff;
-  border: 4px solid black;
-  border-radius: 0.5em;
-  color: whitesmoke;
-  width: 70vw;
-  max-width: 445px;
-  padding: 1em;
+  color: white;
+  padding: 2rem;
+  padding-bottom: 20px;
   /* height: 100%; */
-  margin: 0 auto;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 50% 100%, 0% 80%);
 }
 
-.color-box li {
-  list-style-type: none;
-  margin-left: -2.5em;
+#color-heading {
+  align-self: center;
+}
+div.colors-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  height: calc(1.5rem * 5);
+}
+
+.color {
+  width: 20vw;
   text-align: center;
-  max-width: 400px;
-  width: 50vw;
-  padding: 1em;
-  height: 2.5em;
 }
 
-.color-1 {
+#zero {
   background-color: #343c58;
   border-top-left-radius: 0.5em;
-  border-top-right-radius: 0.5em;
+  /* border-top-right-radius: 0.5em; */
+  border-bottom-left-radius: 0.5em;
 }
-.color-2 {
+
+#first {
   background-color: #4e3f60;
 }
-.color-3 {
+#second {
   background-color: #5e3e5a;
 }
-.color-4 {
+#third {
   background-color: #b62b2b;
 }
-.color-5 {
+#fourth {
   background-color: #ff1818;
-  border-bottom-left-radius: 0.5em;
+  /* border-bottom-left-radius: 0.5em; */
   border-bottom-right-radius: 0.5em;
+  border-top-right-radius: 0.5em;
 }
 
 button#menu {
+  align-self: center;
   margin: 1em;
   border: 3px solid black;
   padding: 1em;

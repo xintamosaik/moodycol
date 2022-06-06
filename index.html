@@ -19,11 +19,15 @@
   </head>
   <body>
     <main>
-      <section id="welcome-page" >
+      <section id="welcome-page" class="hidden">
+          <svg width="400" height="110">
+              <rect width="300" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+            </svg>
         <h1 class="welcome-title">WELCOME TO MOODSIMULATOR</h1>
         <div class="stage">
           <a id="arrow" class="arrow box bounce-4">&#8595;</a>
         </div>
+        
       </section>
 <!-- ##############################################-->
 <!-- #                                            #-->
@@ -39,31 +43,48 @@
         </div>
         <button id="back">BACK TO WELCOME</button>
       </div>
+      
       </section>
 <!-- ##############################################-->
 <!-- #                                            #-->
 <!-- #                  OUTPUT                     #-->
 <!-- #                                            #-->
 <!-- ##############################################-->
-      <section id="output-page" class="hidden">
+      <section id="output-page">
         <div id="output">
           <label class="palette" for="palette">Your Color Palette</label>
           <output id="palette" type="text" name="palette">
-         
-            <div class="color-box">
-              <h1>Hunger</h1>
-              <ul>
-                <li class="color-1"><p>#343C58</p></li>
-                <li class="color-2"><p>#4E3F60</p></li>
-                <li class="color-3"><p>#5E3E5A</p></li>
-                <li class="color-4"><p>#B62B2B</p></li>
-                <li class="color-5"><p>#FF1818</p></li>
-              </ul>
+            
+            <div id="color-box">
+              <div id="between">
+              <div id="inner-box">             
+              <h1 id="color-heading">Hunger</h1>
+              
+              <div class="colors-wrapper">
+                  <div class="color" id="zero">
+                      <p>#797e82</p>
+                  </div>
+                  <div class="color" id="first">
+                      <p>#cbd3da</p>
+                  </div>
+                  <div class="color" id="second">
+                      <p>#dae0e5</p>
+                  </div>
+                  <div class="color" id="third">
+                      <p>#e9ecef</p>
+                  </div>
+                  <div class="color" id="fourth">
+                      <p>#f8f9fa</p>
+                  </div>
+              </div>
             
           </output>
           <button id="menu">BACK</button>
         </div>
-    
+      </div>
+        </div>
+        
+        
       </section>
     </main>
     <script src="src/index.js"></script>
