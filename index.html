@@ -25,47 +25,39 @@
           <a id="arrow" class="arrow box bounce-4">&#8595;</a>
         </div>
       </section>
-<!-- ##############################################-->
-<!-- #                                            #-->
-<!-- #                  INPUT                     #-->
-<!-- #                                            #-->
-<!-- ##############################################-->
-      <section id="input-page" class="hidden">
-        <div class=flex>
-        <div id="input">
+
+<div id="desktop-box">
+  <section id="input">
           <label class="question" for="mood">How are you feeling?</label>
-          <input id="mood" type="text" name="mood" placeholder="hangry?"></input>
+          <input id="mood" type="text" name="mood" placeholder="hungry?"></input>
           <button id="generator">SUBMIT</button>
-        </div>
+      
         <button id="back">BACK TO WELCOME</button>
-      </div>
-      </section>
-<!-- ##############################################-->
-<!-- #                                            #-->
-<!-- #                  OUTPUT                     #-->
-<!-- #                                            #-->
-<!-- ##############################################-->
-      <section id="output-page" class="hidden">
-        <div id="output">
-          <label class="palette" for="palette">Your Color Palette</label>
+   
+  </section>
+        <section id="output">
+
+        
+       
           <output id="palette" type="text" name="palette">
          
-            <div class="color-box">
-              <h1>Hunger</h1>
-              <ul>
-                <li class="color-1"><p>#343C58</p></li>
-                <li class="color-2"><p>#4E3F60</p></li>
-                <li class="color-3"><p>#5E3E5A</p></li>
-                <li class="color-4"><p>#B62B2B</p></li>
-                <li class="color-5"><p>#FF1818</p></li>
-              </ul>
+
+              <h1>Hunger</h1> 
+              
+                <div class="color" id="first">#343C58</div>
+                <div class="color" id="second">#4E3F60</div>
+                <div class="color" id="third">#5E3E5A</div>
+                <div class="color" id="fourth">#B62B2B</div>
+                <div class="color" id="last">#FF1818</div>
+              
             
           </output>
-          <button id="menu">BACK</button>
-        </div>
-    
-      </section>
+          
+        </section>
+
+  
     </main>
     <script src="src/index.js"></script>
   </body>
+  
 </html>

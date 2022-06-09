@@ -97,27 +97,32 @@ h1 {
  **************************************************/
 div#desktop-box {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  background: linear-gradient(to top, #dcdae6, #a0a4c5);
-
+  background: linear-gradient(to top, #d3d3d3, white);
   background-repeat: no-repeat;
-
-  height: 100vh;
 }
-
-#input {
-  margin: 2em;
+.flex {
+  height: 100vh;
+  width: 50vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /*background: linear-gradient(to top, whitesmoke, grey);*/
+  background: linear-gradient(to top, #d3d3d3, white);
+  background-repeat: no-repeat;
+}
+
+#input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4em;
+
+  border: 2px solid black;
   border-radius: 0.5em;
-  border: 2px solid #2a3463;
+  width: 17.5em;
   color: whitesmoke;
-  /* background-color: #a0a4c5; */
-  z-index: 1;
 }
 
 input[placeholder] {
@@ -134,6 +139,7 @@ input[placeholder] {
 }
 
 #mood {
+  border: 2px solid black;
   border-radius: 0.5em;
   height: 2.5em;
   width: 12em;
@@ -146,9 +152,9 @@ label {
 
 #generator {
   margin: 1em;
-  border: 2px solid #2a3463;
+  border: 2px solid black;
   padding: 1em;
-  background-color: #c3b571aec;
+  background-color: #05a2e8;
   color: whitesmoke;
   font-size: 1em;
   width: 11.5em;
@@ -165,16 +171,15 @@ label {
 }
 
 #back {
-  border: 2px solid #2a3463;
+  border: 3px solid black;
   padding: 1em;
-  background-color: #555b75;
+  background-color: blue;
   color: whitesmoke;
   font-size: 1em;
   width: 15.5em;
   border-radius: 0.7em;
   cursor: pointer;
-  margin-top: 5em;
-  margin-bottom: 1em;
+  margin-top: 10em;
 }
 
 #back:hover {
@@ -190,8 +195,16 @@ label {
  *                  OUTPUT PAGE                    *
  *                                                 *
  **************************************************/
+#output-page {
+  /* 
+  background: linear-gradient(to top, lightyellow, darkblue);
+  */
 
-section#output {
+  height: 100vh;
+  width: 50vw;
+}
+
+section#color-output-page {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -211,62 +224,24 @@ label.palette {
   text-shadow: 0 0 7px #fff;
 }
 output#palette {
-  position: absolute;
-  top: 150vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  animation: slide 10s forwards;
-
-  animation-iteration-count: infinite;
 }
 output#palette h1 {
   text-shadow: 0 0 5px #fffb;
 }
 
 div.color {
-  height: 7vh;
+  width: 40vw;
+  height: 10vh;
   font-weight: 1000;
-  max-width: 277px;
-  width: 70vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-}
-
-@keyframes slide {
-  from {
-    opacity: 0;
-    top: -120vh;
-  }
-  2% {
-    top: 150vh;
-    opacity: 0;
-  }
-
-  5% {
-    opacity: 1;
-  }
-  10% {
-    opacity: 1;
-    top: 140vh;
-  }
-  20% {
-    top: 150vh;
-  }
-}
-
-@keyframes saturate {
-  from {
-    filter: saturate(0%);
-  }
-  to {
-    filter: saturate(100%);
-  }
 }
 
 div.color:hover {
