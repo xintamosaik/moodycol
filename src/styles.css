@@ -148,7 +148,7 @@ label {
   margin: 1em;
   border: 2px solid #2a3463;
   padding: 1em;
-  background-color: #c3b571aec;
+  background-color: #f900bf;
   color: whitesmoke;
   font-size: 1em;
   width: 11.5em;
@@ -173,7 +173,7 @@ label {
   width: 15.5em;
   border-radius: 0.7em;
   cursor: pointer;
-  margin-top: 5em;
+  margin-top: 1em;
   margin-bottom: 1em;
 }
 

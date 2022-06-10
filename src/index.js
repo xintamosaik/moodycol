@@ -1,6 +1,7 @@
 //const inputSection = document.getElementById("input-page");
 //const outputSection = document.getElementById("output-page");
 const generatorButton = document.getElementById("generator");
+const moodInput = document.getElementById("mood");
 //const welcomeSection = document.getElementById("welcome-page");
 //const backButton = document.getElementById("back");
 //const arrowButton = document.getElementById("arrow");
@@ -26,43 +27,92 @@ menuButton.addEventListener("click", (event) => {
   inputSection.classList.toggle("hidden");
 })
 */
-
-const paletteone = {
+const palette_empty = {
+  one: "",
+  two: "",
+  three: "",
+  four: ""
+};
+const palette_hungry = {
   one: "#4700D8",
   two: "#9900F0",
   three: "#F900BF",
   four: "#FF85B3"
 };
 
-const palette = document.getElementById("palette");
-const childrens = palette.childNodes;
+const palette_excited = {
+  one: "#1F4690",
+  two: "#3A5BA0",
+  three: "#FFA500",
+  four: "#FFE5B4"
+};
 
-const changeColorPalette = (palette) => {
-  childrens[3].innerHTML = paletteone.one;
-  childrens[3].style.backgroundColor = paletteone.one;
-  childrens[5].innerHTML = paletteone.two;
-  childrens[5].style.backgroundColor = paletteone.two;
-  childrens[7].innerHTML = paletteone.three;
-  childrens[7].style.backgroundColor = paletteone.three;
-  childrens[9].innerHTML = paletteone.four;
-  childrens[9].style.backgroundColor = paletteone.four;
+const palette_sad = {
+  one: "#003769",
+  two: "#004b90",
+  three: "#175981",
+  four: "#016c8b"
 };
-changeColorPalette(childrens);
-const resetColorPalette = () => {
-  childrens[3].innerHTML = "";
-  childrens[5].innerHTML = "";
-  childrens[7].innerHTML = "";
-  childrens[9].innerHTML = "";
-  childrens[3].style.border = "";
-  childrens[5].style.border = "";
-  childrens[7].style.border = "";
-  childrens[9].style.border = "";
-  childrens[3].style.backgroundColor = "";
-  childrens[5].style.backgroundColor = "";
-  childrens[7].style.backgroundColor = "";
-  childrens[9].style.backgroundColor = "";
+
+const palette_happy = {
+  one: "#F00",
+  two: "#00F",
+  three: "#0FF",
+  four: "#0FF"
 };
+
+const palette_awkward = {
+  one: "#F0F",
+  two: "#F0F",
+  three: "#F0F",
+  four: "#F0F"
+};
+
+const changeColorPalette = (color_palette) => {
+  const header = document.getElementById("choosenMood");
+  const palette = document.getElementById("palette");
+  const childrens = palette.childNodes;
+  const firstElement = childrens[3];
+  const secondElement = childrens[5];
+  const thirdElement = childrens[7];
+  const fourthElement = childrens[9];
+  header.innerHTML = moodInput.value;
+  firstElement.innerHTML = color_palette.one;
+  firstElement.style.backgroundColor = color_palette.one;
+  firstElement.style.border = color_palette.one;
+  secondElement.innerHTML = color_palette.two;
+  secondElement.style.backgroundColor = color_palette.two;
+  secondElement.style.border = color_palette.one;
+  thirdElement.innerHTML = color_palette.three;
+  thirdElement.style.backgroundColor = color_palette.three;
+  thirdElement.style.border = color_palette.one;
+  fourthElement.innerHTML = color_palette.four;
+  fourthElement.style.backgroundColor = color_palette.four;
+  fourthElement.style.border = color_palette.one;
+};
+console.dir(moodInput.value);
+moodInput.addEventListener("change", (event) => {
+  console.log(moodInput.value);
+});
 
 generatorButton.addEventListener("click", (event) => {
-  resetColorPalette();
+  console.log(moodInput.value);
+  switch (moodInput.value) {
+    case "hungry":
+      changeColorPalette(palette_hungry);
+      break;
+    case "excited":
+      changeColorPalette(palette_excited);
+      break;
+    case "sad":
+      changeColorPalette(palette_sad);
+      break;
+    case "happy":
+      changeColorPalette(palette_happy);
+      break;
+    case "awkward":
+      changeColorPalette(palette_awkward);
+      break;
+    default:
+  }
 });
