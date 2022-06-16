@@ -20,54 +20,48 @@
   <body>
     <main>
       <section id="welcome-page" >
-        <h1 class="welcome-title">WELCOME TO MOODSIMULATOR</h1>
-        <div class="stage">
-          <a id="arrow" class="arrow box bounce-4">&#8595;</a>
-        </div>
+        <h1 id="welcome-title">WELCOME TO MOODSIMULATOR</h1>
+          <div id="arrow" class="box bounce">&#8595;</div>
       </section>
 
 <div id="desktop-box">
+  <div class="input-output-wrapper">
   <section id="input">
           
           <label class="question" for="mood">How are you feeling?</label>
-          <input list="moods" id="mood" name="mood" placeholder="hungry?"/>
+          <select list="moods" id="mood" name="mood" >
 
-          <datalist id="moods">
-            <option value="hungry">
-            <option value="excited">
-            <option value="sad">
-            <option value="happy">
-            <option value="awkward">
-        </datalist>
-          
-          <button id="generator">SUBMIT</button>
+            <option value="" disabled selected>Choose your mood</option>
+            <option value="hungry">Hungry</option>
+            <option value="excited">Excited</option>
+            <option value="sad">Sad</option>
+            <option value="happy">Happy</option>
+            <option value="awkward">Awkward</option>
+
+          </select>
+
+          <!-- <button id="generator">SUBMIT</button> -->
       
-        <button id="back">BACK TO WELCOME</button>
+        <!-- <button id="back">BACK TO WELCOME</button> -->
    
   </section>
         <section id="output">
-
-        
-       
           <output id="palette" type="text" name="palette">
-         
-
-              <h1 id="choosenMood">mood</h1> 
+              <!-- <h1 id="choosenMood">Mood</h1>   -->
               
                 <div class="color" id="first">#343C58</div>
                 <div class="color" id="second">#4E3F60</div>
                 <div class="color" id="third">#5E3E5A</div>
                 <div class="color" id="fourth">#B62B2B</div>
-            
               
             
           </output>
           
         </section>
-
+      </div>
   
     </main>
-    <script src="src/index.js"></script>
+     <script src="src/index.js"></script> 
   </body>
   
 </html>

@@ -72,6 +72,8 @@ const changeColorPalette = (color_palette) => {
   const header = document.getElementById("choosenMood");
   const palette = document.getElementById("palette");
   const childrens = palette.childNodes;
+  // console.log(childrens)
+  // console.log(palette.children)
   const firstElement = childrens[3];
   const secondElement = childrens[5];
   const thirdElement = childrens[7];
