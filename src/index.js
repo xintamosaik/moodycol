@@ -1,120 +1,108 @@
-//const inputSection = document.getElementById("input-page");
-//const outputSection = document.getElementById("output-page");
-const generatorButton = document.getElementById("generator");
 const moodInput = document.getElementById("mood");
-//const welcomeSection = document.getElementById("welcome-page");
-//const backButton = document.getElementById("back");
-//const arrowButton = document.getElementById("arrow");
-//const menuButton = document.getElementById("menu");
-/*
-generatorButton.addEventListener("click", (event) => {
-  outputSection.classList.toggle("hidden");
-  inputSection.classList.toggle("hidden");
-})
 
-backButton.addEventListener("click", (event) => {
-  welcomeSection.classList.toggle("hidden");
-  inputSection.classList.toggle("hidden");
-})
-
-arrowButton.addEventListener("click", (event) => {
-  welcomeSection.classList.toggle("hidden");
-  inputSection.classList.toggle("hidden");
-})
-
-menuButton.addEventListener("click", (event) => {
-  outputSection.classList.toggle("hidden");
-  inputSection.classList.toggle("hidden");
-})
-*/
-const palette_empty = {
-  one: "",
-  two: "",
-  three: "",
-  four: ""
-};
 const palette_hungry = {
-  one: "#4700D8",
-  two: "#9900F0",
-  three: "#F900BF",
-  four: "#FF85B3"
+  first: "#4700D8",
+  second: "#9900F0",
+  third: "#F900BF",
+  fourth: "#FF85B3"
 };
 
 const palette_excited = {
-  one: "#1F4690",
-  two: "#3A5BA0",
-  three: "#FFA500",
-  four: "#FFE5B4"
+  first: "#3EC1D3",
+  second: "#F6F7D7",
+  third: "#FF9A00",
+  fourth: "#FF165D"
 };
 
 const palette_sad = {
-  one: "#003769",
-  two: "#004b90",
-  three: "#175981",
-  four: "#016c8b"
+  first: "#003769",
+  second: "#004b90",
+  third: "#175981",
+  fourth: "#016c8b"
 };
 
 const palette_happy = {
-  one: "#F00",
-  two: "#00F",
-  three: "#0FF",
-  four: "#0FF"
+  first: "#FFCFDF",
+  second: "#FEFDCA",
+  third: "#E0F9B5",
+  fourth: "#A5DEE5"
 };
 
 const palette_awkward = {
-  one: "#F0F",
-  two: "#F0F",
-  three: "#F0F",
-  four: "#F0F"
+  first: "#CB026E",
+  second: "#F62800",
+  third: "#FFDB00",
+  fourth: "#7BCD00"
 };
 
+const palette_calm = {
+  first: "#E3FDFD",
+  second: "#CBF1F5",
+  third: "#A6E3E9",
+  fourth: "#71C9CE"
+};
+
+const palette_confident = {
+  first: "#222831",
+  second: "#393E46",
+  third: "#00ADB5",
+  fourth: "#EEEEEE"
+};
+const recolor = (elementID, color) => {
+  try {
+    const element = document.getElementById(elementID);
+    try {
+      element.classList.remove("stop");
+      element.innerHTML = color;
+      element.style.backgroundColor = color;
+      element.style.border = color;
+      element.classList.add("start");
+
+      setTimeout(function () {
+        element.classList.remove("start");
+      }, 3000);
+    } catch (error) {
+      console.log(error);
+    }
+  } catch (error) {}
+};
 const changeColorPalette = (color_palette) => {
-  const header = document.getElementById("choosenMood");
-  const palette = document.getElementById("palette");
-  const childrens = palette.childNodes;
-  // console.log(childrens)
-  // console.log(palette.children)
-  const firstElement = childrens[3];
-  const secondElement = childrens[5];
-  const thirdElement = childrens[7];
-  const fourthElement = childrens[9];
-  header.innerHTML = moodInput.value;
-  firstElement.innerHTML = color_palette.one;
-  firstElement.style.backgroundColor = color_palette.one;
-  firstElement.style.border = color_palette.one;
-  secondElement.innerHTML = color_palette.two;
-  secondElement.style.backgroundColor = color_palette.two;
-  secondElement.style.border = color_palette.one;
-  thirdElement.innerHTML = color_palette.three;
-  thirdElement.style.backgroundColor = color_palette.three;
-  thirdElement.style.border = color_palette.one;
-  fourthElement.innerHTML = color_palette.four;
-  fourthElement.style.backgroundColor = color_palette.four;
-  fourthElement.style.border = color_palette.one;
+  const colorFields = ["first", "second", "third", "fourth"];
+  colorFields.forEach((element) => {
+    setTimeout(function () {
+      recolor(element, color_palette[element]);
+    }, 200);
+  });
 };
-console.dir(moodInput.value);
-moodInput.addEventListener("change", (event) => {
-  console.log(moodInput.value);
-});
 
-generatorButton.addEventListener("click", (event) => {
-  console.log(moodInput.value);
-  switch (moodInput.value) {
-    case "hungry":
-      changeColorPalette(palette_hungry);
-      break;
-    case "excited":
-      changeColorPalette(palette_excited);
-      break;
-    case "sad":
-      changeColorPalette(palette_sad);
-      break;
-    case "happy":
-      changeColorPalette(palette_happy);
-      break;
-    case "awkward":
-      changeColorPalette(palette_awkward);
-      break;
-    default:
-  }
-});
+try {
+  moodInput.addEventListener("change", (event) => {
+    switch (moodInput.value) {
+      case "hungry":
+        changeColorPalette(palette_hungry);
+        break;
+      case "excited":
+        changeColorPalette(palette_excited);
+        break;
+      case "sad":
+        changeColorPalette(palette_sad);
+        break;
+      case "happy":
+        changeColorPalette(palette_happy);
+        break;
+      case "awkward":
+        changeColorPalette(palette_awkward);
+        break;
+      case "calm":
+        changeColorPalette(palette_calm);
+        break;
+      case "confident":
+        changeColorPalette(palette_confident);
+        break;
+
+      default:
+    }
+  });
+} catch (error) {
+  console.log(error);
+}
