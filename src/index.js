@@ -118,7 +118,7 @@ try {
         changeColorPalette(palette_hot);
         break;
       case "cold":
-        changeColorPalette(palette_hot);
+        changeColorPalette(palette_cold);
         break;
       default:
     }
