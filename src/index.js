@@ -48,6 +48,21 @@ const palette_confident = {
   third: "#00ADB5",
   fourth: "#EEEEEE"
 };
+
+const palette_hot = {
+  first: "#e54b4bff",
+  second: "#ffa987ff",
+  third: "#f7ebe8ff",
+  fourth: "#444140ff"
+};
+
+const palette_cold = {
+  first: "#1d3461ff",
+  second: "#1f487eff",
+  third: "#376996ff",
+  fourth: "#829cbcff"
+};
+
 const recolor = (elementID, color) => {
   try {
     const element = document.getElementById(elementID);
@@ -99,7 +114,12 @@ try {
       case "confident":
         changeColorPalette(palette_confident);
         break;
-
+      case "hot":
+        changeColorPalette(palette_hot);
+        break;
+      case "cold":
+        changeColorPalette(palette_hot);
+        break;
       default:
     }
   });
