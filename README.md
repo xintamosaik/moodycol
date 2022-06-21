@@ -1,2 +1,2 @@
 # moodycol
-Created with CodeSandbox
+Animated mood color generator created with codesandbox and passion
